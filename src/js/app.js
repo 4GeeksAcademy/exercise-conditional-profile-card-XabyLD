@@ -60,10 +60,10 @@ function render(variables = {}) {
            <h2>${rol}</h2>
           <h3>${selectCity}  ${selectCountry}</h3>
           <ul class=${position}>
-            <li><a href="https://twitter.com/xKebx"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/Longodios"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/feed/?trk=sem-ga_campid.18146679037_asid.140850334975_crid.694860685343_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.20280"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/Xaby1993"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="${variables.twitter}"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="${variables.github}"><i class="fab fa-github"></i></a></li>
+            <li><a href="${variables.linkedin}"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="${variables.instagram}"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
