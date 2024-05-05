@@ -1,9 +1,11 @@
+import { left } from "@popperjs/core";
 import "../style/index.css";
 
-/**
- *  EDIT ONLY INSIDE THIS RENDER FUNCTION
- *  This function is called every time the user changes types or changes any input
- * 
+/*  EDIT ONLY INSIDE THIS RENDER FUNCTION
+   This function is called every time the user changes types or changes any input 
+ 
+
+
     {
         includeCover: true, // if includeCover is true the algorithm should show the cover image
         background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da", // this is the image's url that will be used as a background for the profile cover
@@ -21,26 +23,47 @@ import "../style/index.css";
         country: null,
         city: null
     }
- */
+
+    */
+
 function render(variables = {}) {
   console.log("These are the current variables: ", variables); // print on the console
   // here we ask the logical questions to make decisions on how to build the html
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
+  let nombre =
+    variables.name === null ? (variables.name = "Your name") : variables.name;
+  let apellido =
+    variables.lastName === null
+      ? (variables.lastName = "Your last Name")
+      : variables.lastName;
+  let rol =
+    variables.role === null ? (variables.role = "Your role") : variables.role;
+  let selectCity =
+    variables.city === null ? (variables.city = "Your City") : variables.city;
+  let selectCountry =
+    variables.country === null
+      ? (variables.country = "Your country")
+      : variables.country;
+  let position =
+    variables.socialMediaPosition !== "position-right"
+      ? (variables.socialMediaPosition = "position-left")
+      : (variables.socialMediaPosition = "position-right");
 
   // reset the website body with the new html output
-  document.querySelector("#widget_content").innerHTML = `<div class="widget">
-            ${cover}
+  document.querySelector("#widget_content").innerHTML = `
+  <div class="widget">
+            ${cover} 
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <h1>${nombre}&nbsp;${apellido}</h1>
+           <h2>${rol}</h2>
+          <h3>${selectCity}  ${selectCountry}</h3>
+          <ul class=${position}>
+            <li><a href="https://twitter.com/xKebx"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/Longodios"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/feed/?trk=sem-ga_campid.18146679037_asid.140850334975_crid.694860685343_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.20280"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/Xaby1993"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;

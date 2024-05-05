@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello Rigo with Vanilla.js</title>
     <link rel="shortcut icon" href="./assets/img/4geeks.ico" />
+    <!--Linked CSS-->
+    <link rel="stylesheet" href="style/index.css" />
+    <!--Link Boostrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <script
       src="https://kit.fontawesome.com/072e5df971.js"
       crossorigin="anonymous"
@@ -54,7 +63,8 @@
       </li>
       <li>
         <label>Role</label>
-        <select class="picker" for="role">
+        <select class="picker" for="role"
+          >ghybh
           <option value="">null</option>
           <option value="Web Developer">Web Developer</option>
           <option value="Floor Planner">Floor Planner</option>
@@ -82,9 +92,48 @@
         </select>
       </li>
     </ul>
-    <div id="widget_content"></div>
+    <div id="widget_content">
+      <div class="widget">
+        <div class="cover">
+          <img src="https://the_url.com/for_the_background.png" />
+        </div>
+        <img src="https://the_url.com/for_the_image.png" class="photo" />
+        <h1>Your Name</h1>
+        <h2>Your last name</h2>
+        <h3>Miami, USA</h3>
+        <ul class="position-right">
+          <li>
+            <a href="https://twitter.com/alesanchezr"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/alesanchezr"
+              ><i class="fa fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/alesanchezr"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://instagram.com/alesanchezr"
+              ><i class="fa fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!-- do not remove this bundle.js tag -->
+    <script src="js/app.js"></script>
     <script type="text/javascript" src="/main.bundle.js"></script>
+    <!--Boostrap Script-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
